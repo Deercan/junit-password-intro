@@ -52,5 +52,15 @@ public class PasswordUtilsTest {
         assertEquals(2, actual);
     }
 
+    @Test 
+    void testHasSufficientSpecialCharacters(){
+        String password = "abc*.n";
+
+        boolean actual = PasswordUtils.hasSufficientSpecialCharacters(password, 2);
+    
+        assertEquals(true, actual);
+    }
+
+
 
 }
