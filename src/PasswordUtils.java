@@ -93,11 +93,11 @@ return counter;
 * @return true has the minimum number of special charcters or more, false otherwise
 */
 public static boolean hasSufficientSpecialCharacters(String password, int minimum) {
-// TODO: Make tests FIRST, then implement the method
-// Please have your tests in a separate commit from the implementation
-// Required: please use countSpecialCharacters as a helper method.
-// Don't just copy/paste the logic!
-return false;
+    if (PasswordUtils.countSpecialCharacters(password) >= minimum) {
+        return true;
+        
+    }
+    return false;
 }
 
 }
