@@ -9,16 +9,19 @@ public class PasswordUtils {
      * @param password the password to analyze
      * @return "short" if the password has fewer than 6 characters,
      *         "medium" if it has between 6 and 11 characters (inclusive),
-     *         or "long" if it has 12 or more characters
+     *         or "long" if it has 12 to 20 or more characters
+     *         or "extra long" if it has more than 20 characters
      */
     public static String describePasswordLength(String password) {
         int length = password.length();
         if (length < 6) {
             return "short";
-        } else if (length <= 12) {
+        } else if (length < 12) {
             return "medium";
-        }
-        return "long";
+        } else if ((length >= 12) && (length < 21))
+            return "long";
+        else return "extra long";
+        
     }
 
     /**
