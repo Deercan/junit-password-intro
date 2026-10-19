@@ -43,5 +43,10 @@ public class PasswordUtilsTest {
         assertEquals(true, actual);
     }
 
-    
+    @Test 
+    void testCountSpecialCharacters(){
+        
+    }
+
+
 }
