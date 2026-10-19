@@ -35,11 +35,13 @@ public class PasswordUtilsTest {
     }
 
     @Test
-    void testThreeRepeat(){
+    void testContainsTriple(){
         String password = "taaal";
 
-        Boolean actual = PasswordUtils.ThreeRepeat(password);
+        Boolean actual = PasswordUtils.containsTriple(password);
 
         assertEquals(true, actual);
     }
+
+    
 }
